@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="stopWatchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl8-XD-HJc">
+                                <rect key="frame" x="239" y="280" width="121.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mML-UX-VjH">
+                                <rect key="frame" x="284" y="369" width="33" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8qn-6V-HgZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e9-iH-7bl">
+                                <rect key="frame" x="201" y="369" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dqu-xK-HV6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02r-3U-MEH">
+                                <rect key="frame" x="367" y="369" width="40" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQA-kk-eQM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Wl8-XD-HJc" secondAttribute="centerY" id="2UY-JI-mFX"/>
+                            <constraint firstItem="mML-UX-VjH" firstAttribute="leading" secondItem="6e9-iH-7bl" secondAttribute="trailing" constant="50" id="5U4-2s-YIA"/>
+                            <constraint firstAttribute="centerX" secondItem="Wl8-XD-HJc" secondAttribute="centerX" id="6ZU-c7-zM0"/>
+                            <constraint firstAttribute="centerX" secondItem="mML-UX-VjH" secondAttribute="centerX" id="EfY-Ld-xnf"/>
+                            <constraint firstItem="02r-3U-MEH" firstAttribute="leading" secondItem="mML-UX-VjH" secondAttribute="trailing" constant="50" id="NQm-Q0-Bab"/>
+                            <constraint firstItem="mML-UX-VjH" firstAttribute="centerY" secondItem="6e9-iH-7bl" secondAttribute="centerY" id="SAz-Y4-Z4q"/>
+                            <constraint firstItem="02r-3U-MEH" firstAttribute="centerY" secondItem="mML-UX-VjH" secondAttribute="centerY" id="YRC-x1-pGs"/>
+                            <constraint firstItem="mML-UX-VjH" firstAttribute="top" secondItem="Wl8-XD-HJc" secondAttribute="bottom" constant="50" id="fJg-ra-Qnc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resetButton" destination="02r-3U-MEH" id="yS9-Ay-bmn"/>
+                        <outlet property="startButton" destination="6e9-iH-7bl" id="oa8-Pp-WFO"/>
+                        <outlet property="stopButton" destination="mML-UX-VjH" id="OQK-cj-l5j"/>
+                        <outlet property="timeLabel" destination="Wl8-XD-HJc" id="E0p-Va-RHq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
